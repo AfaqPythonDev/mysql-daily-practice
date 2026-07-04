@@ -68,7 +68,7 @@ CREATE TABLE salaries (
     FOREIGN KEY (emp_id) REFERENCES employees(emp_id)
 );
 
-
+-- STEP 4: Insert data
 
 INSERT INTO departments (dept_name, location, budget) VALUES
 ('Engineering', 'Bangalore', 950000.00),
@@ -79,8 +79,6 @@ INSERT INTO departments (dept_name, location, budget) VALUES
 ('Operations', 'Chennai', 450000.00),
 ('Product', 'Bangalore', 800000.00),
 ('Customer Support', 'Kolkata', 250000.00);
-
-
 
 INSERT INTO employees (first_name, last_name, email, phone, hire_date, salary, dept_id, manager_id) VALUES
 ('Rajesh', 'Kumar', 'rajesh.kumar@company.com', '9810001111', '2018-03-15', 95000.00, 1, NULL),
@@ -114,40 +112,38 @@ INSERT INTO employees (first_name, last_name, email, phone, hire_date, salary, d
 ('Varun', 'Kapoor', 'varun.kapoor@company.com', '9809109999', '2018-01-14', 93000.00, 5, 5),
 ('Smita', 'Patil', 'smita.patil@company.com', '9810210000', '2020-03-08', 77000.00, 6, 6);
 
-
-
+-- Customers now span 10 different countries
 INSERT INTO customers (full_name, email, phone, city, country, joined_date) VALUES
 ('Aakash Trivedi', 'aakash.t@gmail.com', '9901001001', 'Mumbai', 'India', '2021-01-15'),
 ('Bhavna Shah', 'bhavna.shah@gmail.com', '9902002002', 'Ahmedabad', 'India', '2021-03-22'),
 ('Chirag Lotia', 'chirag.l@gmail.com', '9903003003', 'Surat', 'India', '2021-05-10'),
 ('Disha Mody', 'disha.mody@gmail.com', '9904004004', 'Pune', 'India', '2021-07-18'),
 ('Eshan Parikh', 'eshan.p@gmail.com', '9905005005', 'Vadodara', 'India', '2021-09-05'),
-('Foram Desai', 'foram.d@gmail.com', '9906006006', 'Rajkot', 'India', '2021-11-12'),
-('Gaurangi Mehta', 'gaurangi.m@gmail.com', '9907007007', 'Mumbai', 'India', '2022-01-20'),
-('Harsh Patel', 'harsh.p@gmail.com', '9908008008', 'Delhi', 'India', '2022-02-14'),
-('Isha Kapoor', 'isha.k@gmail.com', '9909009009', 'Bangalore', 'India', '2022-03-30'),
-('Jayesh Rathod', 'jayesh.r@gmail.com', '9910010010', 'Chennai', 'India', '2022-05-08'),
-('Krupa Nair', 'krupa.n@gmail.com', '9911011011', 'Hyderabad', 'India', '2022-06-25'),
-('Laksh Sharma', 'laksh.s@gmail.com', '9912012012', 'Kolkata', 'India', '2022-08-03'),
-('Manav Joshi', 'manav.j@gmail.com', '9913013013', 'Pune', 'India', '2022-09-17'),
-('Nidhi Gupta', 'nidhi.g@gmail.com', '9914014014', 'Delhi', 'India', '2022-10-29'),
-('Om Prakash', 'om.p@gmail.com', '9915015015', 'Jaipur', 'India', '2022-12-05'),
-('Palak Verma', 'palak.v@gmail.com', '9916016016', 'Lucknow', 'India', '2023-01-18'),
-('Qasim Ali', 'qasim.a@gmail.com', '9917017017', 'Hyderabad', 'India', '2023-02-27'),
-('Riddhi Soni', 'riddhi.s@gmail.com', '9918018018', 'Ahmedabad', 'India', '2023-04-04'),
-('Sahil Bhatia', 'sahil.b@gmail.com', '9919019019', 'Mumbai', 'India', '2023-05-13'),
-('Tanvi Rao', 'tanvi.r@gmail.com', '9920020020', 'Bangalore', 'India', '2023-06-22'),
-('Uday Kiran', 'uday.k@gmail.com', '9921021021', 'Chennai', 'India', '2023-07-31'),
-('Vidya Pillai', 'vidya.p@gmail.com', '9922022022', 'Kochi', 'India', '2023-08-15'),
-('Wahida Banu', 'wahida.b@gmail.com', '9923023023', 'Mysore', 'India', '2023-09-02'),
-('Xerxes Irani', 'xerxes.i@gmail.com', '9924024024', 'Mumbai', 'India', '2023-09-20'),
-('Yashvi Doshi', 'yashvi.d@gmail.com', '9925025025', 'Rajkot', 'India', '2023-10-08'),
+('John Miller', 'john.miller@gmail.com', '2025550101', 'New York', 'USA', '2021-11-12'),
+('Emily Davis', 'emily.davis@gmail.com', '2025550102', 'Los Angeles', 'USA', '2022-01-20'),
+('Michael Brown', 'michael.brown@gmail.com', '2025550103', 'Chicago', 'USA', '2022-02-14'),
+('Sarah Wilson', 'sarah.wilson@gmail.com', '2025550104', 'Houston', 'USA', '2022-03-30'),
+('David Thompson', 'david.t@gmail.com', '4165550201', 'Toronto', 'Canada', '2022-05-08'),
+('Emma Martin', 'emma.martin@gmail.com', '4165550202', 'Vancouver', 'Canada', '2022-06-25'),
+('Liam Anderson', 'liam.a@gmail.com', '4165550203', 'Montreal', 'Canada', '2022-08-03'),
+('Oliver Smith', 'oliver.smith@gmail.com', '2075550301', 'London', 'UK', '2022-09-17'),
+('Sophie Taylor', 'sophie.t@gmail.com', '2075550302', 'Manchester', 'UK', '2022-10-29'),
+('Jack Harris', 'jack.harris@gmail.com', '2075550303', 'Birmingham', 'UK', '2022-12-05'),
+('Chloe Walker', 'chloe.w@gmail.com', '2895550401', 'Sydney', 'Australia', '2023-01-18'),
+('Noah White', 'noah.white@gmail.com', '2895550402', 'Melbourne', 'Australia', '2023-02-27'),
+('Hans Muller', 'hans.muller@gmail.com', '4915550501', 'Berlin', 'Germany', '2023-04-04'),
+('Anna Schmidt', 'anna.schmidt@gmail.com', '4915550502', 'Munich', 'Germany', '2023-05-13'),
+('Pierre Dubois', 'pierre.d@gmail.com', '3315550601', 'Paris', 'France', '2023-06-22'),
+('Marie Laurent', 'marie.l@gmail.com', '3315550602', 'Lyon', 'France', '2023-07-31'),
+('Yuki Tanaka', 'yuki.tanaka@gmail.com', '8115550701', 'Tokyo', 'Japan', '2023-08-15'),
+('Haruto Sato', 'haruto.sato@gmail.com', '8115550702', 'Osaka', 'Japan', '2023-09-02'),
+('Wei Zhang', 'wei.zhang@gmail.com', '8615550801', 'Shanghai', 'China', '2023-09-20'),
+('Li Wang', 'li.wang@gmail.com', '8615550802', 'Beijing', 'China', '2023-10-08'),
 ('Zara Khan', 'zara.k@gmail.com', '9926026026', 'Delhi', 'India', '2023-10-25'),
 ('Aryan Malviya', 'aryan.m@gmail.com', '9927027027', 'Indore', 'India', '2023-11-10'),
 ('Bhumi Trivedi', 'bhumi.t@gmail.com', '9928028028', 'Surat', 'India', '2023-11-28'),
 ('Chetan Solanki', 'chetan.s@gmail.com', '9929029029', 'Vadodara', 'India', '2023-12-14'),
 ('Drashti Shah', 'drashti.sh@gmail.com', '9930030030', 'Mumbai', 'India', '2024-01-05');
-
 
 INSERT INTO products (product_name, category, price, stock_quantity, supplier) VALUES
 ('Laptop Pro 15', 'Electronics', 75000.00, 50, 'TechWorld Supplies'),
@@ -175,7 +171,6 @@ INSERT INTO products (product_name, category, price, stock_quantity, supplier) V
 ('Dumbbell Set 10kg', 'Fitness', 3200.00, 45, 'FitLife'),
 ('Water Bottle 1L', 'Fitness', 600.00, 250, 'FitLife'),
 ('Protein Powder 1kg', 'Fitness', 2200.00, 80, 'NutriStore');
-
 
 INSERT INTO orders (customer_id, order_date, status, total_amount) VALUES
 (1, '2023-01-05 10:30:00', 'Delivered', 76200.00),
@@ -208,7 +203,6 @@ INSERT INTO orders (customer_id, order_date, status, total_amount) VALUES
 (5, '2024-02-10 14:20:00', 'Delivered', 1948.00),
 (7, '2024-02-24 10:30:00', 'Pending', 3500.00),
 (9, '2024-03-08 15:00:00', 'Shipped', 12600.00);
-
 
 INSERT INTO order_items (order_id, product_id, quantity, unit_price) VALUES
 (1, 1, 1, 75000.00),
@@ -273,7 +267,6 @@ INSERT INTO order_items (order_id, product_id, quantity, unit_price) VALUES
 (30, 25, 1, 2200.00),
 (30, 24, 2, 600.00);
 
-
 INSERT INTO salaries (emp_id, amount, effective_date) VALUES
 (1, 80000.00, '2018-03-15'),
 (1, 88000.00, '2020-04-01'),
@@ -305,5 +298,3 @@ INSERT INTO salaries (emp_id, amount, effective_date) VALUES
 (10, 63000.00, '2020-11-30'),
 (10, 70000.00, '2022-11-01'),
 (10, 75000.00, '2024-01-01');
-
-
